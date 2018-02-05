@@ -1,0 +1,20 @@
+{
+  "name": "terroir",
+  "version": "0.0.0",
+  "description": "A wrapper for page CMS components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jardimcms/terroir.git"
+  },
+  "keywords": [
+    "terroir",
+    "cms",
+    "react"
+  ],
+  "author": "Artur Sousa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jardimcms/terroir/issues"
+  },
+  "homepage": "https://github.com/jardimcms/terroir#readme"
+}
