@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jardimcms/terroir#readme",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/dev.config.js --open"
+    "start": "webpack-dev-server --config webpack/demo.config.js --open"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
