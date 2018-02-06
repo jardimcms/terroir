@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/jardimcms/terroir/issues"
   },
-  "homepage": "https://github.com/jardimcms/terroir#readme"
+  "homepage": "https://github.com/jardimcms/terroir#readme",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
 }
