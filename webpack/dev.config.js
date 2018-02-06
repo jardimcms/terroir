@@ -12,7 +12,8 @@ module.exports = merge(baseConfig, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Terroir Demo'
+      title: 'Terroir Demo',
+      template: path.resolve(__dirname, '../demo/demo.tpl.html')
     })
   ]
 });

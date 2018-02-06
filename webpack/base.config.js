@@ -5,8 +5,19 @@ module.exports = {
   entry: [
     './main.js'
   ],
+
   output: {
     path: path.resolve(__dirname, '../demo'),
     filename: 'bundle.js'
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node-modules/,
+        use: 'babel-loader'
+      }
+    ]
   }
-}
+};
