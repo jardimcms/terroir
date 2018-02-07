@@ -1,5 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Terroir() {
-  return <div>Hi this is terroir</div>;
+class Terroir extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      terroirs: props.terroirs || []
+    };
+  }
+
+  render() {
+    return <div>Hi this is terroir</div>;
+  }
+
 }
+
+Terroir.propTypes = {
+  terroirs: PropTypes.array
+};
+
+export default Terroir;
