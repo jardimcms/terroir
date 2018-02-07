@@ -4,10 +4,12 @@ import Reboot from 'material-ui/Reboot';
 import Button from 'material-ui/Button';
 import Terroir from './main.js';
 
+import './demo.css';
+
 const Demo = () => (
-  <div>
+  <div className="TerroirDemo">
     <Reboot />
-    <h1>Welcome to the Terroir Demo</h1>
+    <h1 className="TerroirDemo-title">Welcome to the Terroir Demo</h1>
     <Terroir />
     <Button variant="raised" color="primary">
       Material Button

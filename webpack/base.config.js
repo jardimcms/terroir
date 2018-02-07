@@ -9,6 +9,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_compontents)/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   }
