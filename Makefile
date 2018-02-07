@@ -1,4 +1,4 @@
-.PHONY: setup start
+.PHONY: setup start lint
 
 ifndef VERBOSE
 .SILENT:
@@ -9,3 +9,6 @@ setup:
 
 run:
 	npm start
+
+lint:
+	npm run lint

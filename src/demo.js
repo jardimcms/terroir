@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Terroir from './main.js';
 import Reboot from 'material-ui/Reboot';
 import Button from 'material-ui/Button';
+import Terroir from './main.js';
 
-ReactDOM.render(
+const Demo = () => (
   <div>
     <Reboot />
     <h1>Welcome to the Terroir Demo</h1>
@@ -12,6 +12,10 @@ ReactDOM.render(
     <Button variant="raised" color="primary">
       Material Button
     </Button>
-  </div>,
+  </div>
+);
+
+ReactDOM.render(
+  <Demo />,
   document.getElementById('demo')
 );

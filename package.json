@@ -18,13 +18,18 @@
   },
   "homepage": "https://github.com/jardimcms/terroir#readme",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/demo.config.js --open"
+    "start": "webpack-dev-server --config webpack/demo.config.js --open",
+    "lint": "eslint ./src ./webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
     "@babel/preset-react": "^7.0.0-beta.39",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^8.0.0-beta.0",
+    "eslint": "^4.17.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.6.1",
     "html-webpack-plugin": "^2.30.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
