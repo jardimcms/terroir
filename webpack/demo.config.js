@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   entry: [
-    './demo.js'
+    '../demo/demo.js'
   ],
 
   output: {

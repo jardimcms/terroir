@@ -1,8 +1,8 @@
-.TerroirDemo {
+.terroir-demo {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   padding: 40px;
 }
 
-.TerroirDemo-title {
+.terroir-demo__title {
   font-size: 2rem;
 }
