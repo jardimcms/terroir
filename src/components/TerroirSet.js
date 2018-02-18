@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Terroir from './Terroir';
 
 class TerroirSet extends React.Component {
 
@@ -14,11 +15,15 @@ class TerroirSet extends React.Component {
   render() {
     const terroirs = this.state.terroirs;
     return (
-      <div className='Terroir'>
+      <div className='terroir-set'>
         {terroirs.length ? (
-          "Terroirs"
+          terroirs.map((terroir, i) => (
+            <Terroir key={`terroir-${i}`} terroir={terroir}/>
+          ))
          ) : (
-          <div className='Terroir__empty'>Nenhum terroir encontrado</div>
+          <div className='terroir-set__empty'>
+            Nenhum terroir encontrado.
+          </div>
          )}
       </div>
     );
