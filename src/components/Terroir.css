@@ -10,26 +10,6 @@
   box-sizing: border-box;
 }
 
-.terroir__head {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(232, 232, 232);
-  /* border-bottom: 1px solid rgb(224, 224, 224); */
-  margin: 0;
-  padding: 5px 10px 5px 20px;
-}
-
-.terroir__head__name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.54);
-}
-
 .terroir__body {
   display: flex;
   flex-wrap: wrap;
