@@ -7,7 +7,6 @@ import IconButton from 'material-ui/IconButton';
 import Menu, { MenuItem } from 'material-ui/Menu';
 
 import MoreVertIcon from 'material-ui-icons/MoreVert';
-import ModeEditIcon from 'material-ui-icons/ModeEdit';
 
 
 const styles = () => ({
