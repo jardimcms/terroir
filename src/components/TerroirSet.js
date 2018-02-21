@@ -17,14 +17,14 @@ class TerroirSet extends React.Component {
     return (
       <div className='terroir-set'>
         {terroirs.length ? (
-          terroirs.map((terroir, i) => (
-            <Terroir key={`terroir-${i}`} terroir={terroir}/>
-          ))
-         ) : (
+          terroirs.map((terroir, i) =>
+            <Terroir key={`terroir-${i}`} terroir={terroir} />
+          )
+        ) : (
           <div className='terroir-set__empty'>
             Nenhum terroir encontrado.
           </div>
-         )}
+        )}
       </div>
     );
   }

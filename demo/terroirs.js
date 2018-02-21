@@ -8,7 +8,7 @@ export default [
         key: 1,
         type: 'card-photo',
         name: 'Card de fotos',
-        description: 'Componente de card de fotos.',
+        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
         thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg',
         data: {
           photo: {
@@ -19,7 +19,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 2,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',
@@ -33,7 +33,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 3,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',
@@ -47,7 +47,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 4,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',
@@ -61,7 +61,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 5,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',
@@ -75,7 +75,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 6,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',
@@ -89,7 +89,7 @@ export default [
         }
       },
       {
-        key: 1,
+        key: 7,
         type: 'card-photo',
         name: 'Card de fotos',
         description: 'Componente de card de fotos.',

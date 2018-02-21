@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
-import MoreVertIcon from 'material-ui-icons/MoreVert';
 import Menu, { MenuItem } from 'material-ui/Menu';
 
-import './Head.css';
+import MoreVertIcon from 'material-ui-icons/MoreVert';
+import ModeEditIcon from 'material-ui-icons/ModeEdit';
+
 
 const styles = () => ({
   icon: {
@@ -20,24 +21,28 @@ class Tile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      anchorEl: null,
+      tileMenuEl: null,
     };
   }
 
   handleClick(event) {
-    this.setState({ anchorEl: event.currentTarget });
+    this.setState({
+      tileMenuEl: event.currentTarget
+    });
   }
 
   handleClose() {
-    this.setState({ anchorEl: null });
+    this.setState({
+      tileMenuEl: null
+    });
   }
 
   render() {
-    const { tile, classes } = this.props;
-    const { anchorEl } = this.state;
+    const { tile, classes, style } = this.props;
+    const { tileMenuEl } = this.state;
 
     return (
-      <GridListTile>
+      <GridListTile style={style}>
         <img src={tile.thumb} alt={tile.name} />
         <GridListTileBar
           title={tile.name}
@@ -46,20 +51,21 @@ class Tile extends React.Component {
             <div>
               <IconButton
                 className={classes.icon}
-                aria-owns={anchorEl ? 'simple-menu' : null}
-                aria-haspopup="true"
+                aria-owns={tileMenuEl ? 'tile-menu' : null}
+                aria-haspopup='true'
                 onClick={this.handleClick.bind(this)}>
                 <MoreVertIcon />
               </IconButton>
               <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
+                id='tile-options'
+                anchorEl={tileMenuEl}
+                open={Boolean(tileMenuEl)}
                 onClose={this.handleClose.bind(this)}
               >
                 <MenuItem onClick={this.handleClose.bind(this)}>Edit</MenuItem>
-                <MenuItem onClick={this.handleClose.bind(this)}>Remove</MenuItem>
                 <MenuItem onClick={this.handleClose.bind(this)}>Draft</MenuItem>
+                <MenuItem onClick={this.handleClose.bind(this)}>Clone</MenuItem>
+                <MenuItem onClick={this.handleClose.bind(this)}>Remove</MenuItem>
               </Menu>
             </div>
           }
@@ -73,6 +79,7 @@ class Tile extends React.Component {
 
 Tile.propTypes = {
   tile: PropTypes.object,
+  style: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired
 };
 

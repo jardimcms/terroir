@@ -31,12 +31,11 @@ class Terroir extends React.Component {
             cols={isWidthUp('sm', width, false) ? 6 : 1}
             cellHeight={250}
             spacing={10}
-            className={classes.gridList}>
-            {terroir.components.map((tile, i) => (
-              <Tile
-                key={`component-${tile.key}-${i}`}
-                tile={tile} />
-            ))}
+            className={classes.gridList}
+          >
+            {terroir.components.map(tile =>
+              <Tile key={`tile-${tile.key}`} tile={tile} />
+            )}
           </GridList>
         </div>
       </div>
