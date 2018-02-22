@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { withStyles } from 'material-ui/styles';
 import IconButton from 'material-ui/IconButton';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import Dialog, {
@@ -8,9 +9,21 @@ import Dialog, {
   DialogContent
 } from 'material-ui/Dialog';
 
+import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList';
+
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 
 import './Head.css';
+
+const styles = () => ({
+  gridList: {
+    transform: 'translateZ(0)',
+    justifyContent: 'center'
+  },
+  gridTile: {
+    cursor: 'pointer'
+  }
+});
 
 class Head extends React.Component {
 
@@ -38,17 +51,25 @@ class Head extends React.Component {
     this.setState({
       dialogOpen: true,
       headMenuEl: null
-     });
+    });
   }
 
   handleDialogClose() {
     this.setState({
       dialogOpen: false
-     });
+    });
+  }
+
+  handlePluginPick(terroir, plugin) {
+    this.setState({
+      dialogOpen: false
+    });
+    this.props.onPluginPick(terroir.id, plugin);
   }
 
   render() {
-    const { name, description } = this.props.terroir;
+    const { classes } = this.props;
+    const { name, description, plugins } = this.props.terroir;
     const { headMenuEl } = this.state;
 
     return (
@@ -87,7 +108,25 @@ class Head extends React.Component {
             Select a plugin
           </DialogTitle>
           <DialogContent>
-            <p>Hi this is the plugin pick</p>
+            <div className='terroir__plugins-pick'>
+              <GridList
+                cols={3}
+                spacing={10}
+                className={classes.gridList}>
+                {plugins.map((plugin, i) => (
+                  <GridListTile
+                    key={`plugin-${i}`}
+                    className={classes.gridTile}
+                    onClick={this.handlePluginPick.bind(this, this.props.terroir, plugin)}>
+                    <img src={plugin.thumb} alt={plugin.name} />
+                    <GridListTileBar
+                      title={plugin.name}
+                      subtitle={plugin.description}
+                    />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
           </DialogContent>
         </Dialog>
       </div>
@@ -97,7 +136,9 @@ class Head extends React.Component {
 }
 
 Head.propTypes = {
-  terroir: PropTypes.object
+  terroir: PropTypes.object,
+  classes: PropTypes.object.isRequired,
+  onPluginPick: PropTypes.func.isRequired,
 };
 
-export default Head;
+export default withStyles(styles)(Head);

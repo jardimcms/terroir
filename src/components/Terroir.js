@@ -21,11 +21,19 @@ const styles = () => ({
 class Terroir extends React.Component {
 
   render() {
-    const { terroir, classes, width } = this.props;
+    const {
+      terroir,
+      classes,
+      width,
+      onPluginPick
+    } = this.props;
 
     return (
       <div className='terroir'>
-        <Head terroir={terroir} />
+        <Head
+          terroir={terroir}
+          onPluginPick={onPluginPick}
+        />
         <div className='terroir__body'>
           <GridList
             cols={isWidthUp('sm', width, false) ? 6 : 1}
@@ -47,7 +55,8 @@ class Terroir extends React.Component {
 Terroir.propTypes = {
   terroir: PropTypes.object,
   classes: PropTypes.object.isRequired,
-  width: PropTypes.string.isRequired
+  width: PropTypes.string.isRequired,
+  onPluginPick: PropTypes.func.isRequired,
 };
 
 export default  compose(withStyles(styles), withWidth())(Terroir);

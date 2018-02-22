@@ -17,3 +17,10 @@
   font-weight: normal;
   color: rgba(0, 0, 0, 0.54);
 }
+
+.terroir__plugins-pick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
