@@ -18,7 +18,8 @@ import './Head.css';
 const styles = () => ({
   gridList: {
     transform: 'translateZ(0)',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    width: '100%'
   },
   gridTile: {
     cursor: 'pointer'

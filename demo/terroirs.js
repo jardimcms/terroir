@@ -140,20 +140,23 @@ export default [
         name: 'Card de fotos',
         description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
         thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
-      },
-      {
-        type: 'card-photo',
-        name: 'Card de fotos',
-        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
-        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
-      },
-      {
-        type: 'card-photo',
-        name: 'Card de fotos',
-        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
-        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
       }
     ],
-    components: []
+    components: [
+      {
+        key: 8,
+        type: 'card-photo',
+        name: 'Card de fotos',
+        description: 'Componente de card de fotos.',
+        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg',
+        data: {
+          photo: {
+            url: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg',
+            caption: 'Minha foto',
+            rightsHolder: 'Someone'
+          }
+        }
+      }
+    ]
   }
 ];

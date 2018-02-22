@@ -15,6 +15,7 @@ import './Terroir.css';
 const styles = () => ({
   gridList: {
     transform: 'translateZ(0)',
+    width: '100%'
   }
 });
 
