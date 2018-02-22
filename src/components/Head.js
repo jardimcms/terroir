@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 import IconButton from 'material-ui/IconButton';
 import Menu, { MenuItem } from 'material-ui/Menu';
+import Dialog, {
+  DialogTitle,
+  DialogContent
+} from 'material-ui/Dialog';
 
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 
@@ -14,6 +18,7 @@ class Head extends React.Component {
     super(props);
     this.state = {
       headMenuEl: null,
+      dialogOpen: false
     };
   }
 
@@ -29,6 +34,19 @@ class Head extends React.Component {
     });
   }
 
+  handleDialogOpen() {
+    this.setState({
+      dialogOpen: true,
+      headMenuEl: null
+     });
+  }
+
+  handleDialogClose() {
+    this.setState({
+      dialogOpen: false
+     });
+  }
+
   render() {
     const { name, description } = this.props.terroir;
     const { headMenuEl } = this.state;
@@ -42,7 +60,7 @@ class Head extends React.Component {
         </h2>
         <div>
           <IconButton
-            aria-label='Options'
+            aria-label='Terroir options'
             aria-owns={headMenuEl ? 'terroir-options' : null}
             aria-haspopup='true'
             onClick={this.handleClick.bind(this)}>
@@ -54,10 +72,24 @@ class Head extends React.Component {
             open={Boolean(headMenuEl)}
             onClose={this.handleClose.bind(this)}
           >
-            <MenuItem onClick={this.handleClose.bind(this)}>Add</MenuItem>
+            <MenuItem onClick={this.handleDialogOpen.bind(this)}>Add</MenuItem>
             <MenuItem onClick={this.handleClose.bind(this)}>Clean</MenuItem>
           </Menu>
         </div>
+        <Dialog
+          aria-labelledby="plugin-selection-dialog"
+          open={this.state.dialogOpen}
+          onClose={this.handleDialogClose.bind(this)}
+          maxWidth='md'
+          fullWidth
+        >
+          <DialogTitle id="plugin-selection-dialog">
+            Select a plugin
+          </DialogTitle>
+          <DialogContent>
+            <p>Hi this is the plugin pick</p>
+          </DialogContent>
+        </Dialog>
       </div>
     );
   }

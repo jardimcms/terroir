@@ -2,7 +2,32 @@ export default [
   {
     name: 'Área Lateral Esquerda',
     description: 'Área de destaques da esquerda.',
-    plugins: [],
+    plugins: [
+      {
+        type: 'card-photo',
+        name: 'Card de fotos',
+        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
+        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
+      },
+      {
+        type: 'card-photo',
+        name: 'Card de fotos',
+        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
+        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
+      },
+      {
+        type: 'card-photo',
+        name: 'Card de fotos',
+        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
+        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
+      },
+      {
+        type: 'card-photo',
+        name: 'Card de fotos',
+        description: 'Componente de card de fotos Componente de card de fotos Componente de card de fotos Componente de card de fotos.',
+        thumb: 'https://material-ui-next.com/static/images/grid-list/breakfast.jpg'
+      }
+    ],
     components: [
       {
         key: 1,
